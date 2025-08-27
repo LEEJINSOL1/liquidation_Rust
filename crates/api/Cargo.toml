@@ -1,0 +1,19 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros", "json"] }
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+utoipa = { version = "4", features = ["axum"] }
+utoipa-swagger-ui = { version = "5", features = ["axum"] }
+storage = { path = "../storage" }
+analytics = { path = "../analytics" }
+alert = { path = "../alert" }
+sqlx = { version = "0.7", features = ["postgres", "runtime-tokio-rustls", "macros"] }
+
+tower = { version = "0.4", optional = false }
