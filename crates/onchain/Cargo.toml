@@ -1,0 +1,11 @@
+[package]
+name = "onchain"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+async-trait = "0.1"
+tracing = "0.1"
+ethers = { version = "2", default-features = false, features = ["abigen", "tokio-runtime"] }
+serde = { version = "1", features = ["derive"] }
